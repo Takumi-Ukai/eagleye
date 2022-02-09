@@ -122,5 +122,10 @@ height:
   outlier_threshold: 0.3                              #Threshold for ending estimated outlier rejection. (default:0.3 m)
   average_num: 50                                     #Moving average parameter of the pitch angle. (default:50 = 1[s])
 
+rolling:
+  stop_judgment_velocity_threshold: 0.01
+  filter_process_noise: 0.01
+  filter_observation_noise: 1
+
 monitor:
   print_status: true

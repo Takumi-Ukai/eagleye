@@ -115,6 +115,10 @@ add_executable(slip_coefficient src/slip_coefficient_node.cpp)
 target_link_libraries(slip_coefficient ${catkin_LIBRARIES})
 add_dependencies(slip_coefficient ${catkin_EXPORTED_TARGETS})
 
+add_executable(rolling src/rolling_node.cpp)
+target_link_libraries(rolling ${catkin_LIBRARIES})
+add_dependencies(rolling ${catkin_EXPORTED_TARGETS})
+
 install(TARGETS
   velocity_scale_factor
   yawrate_offset_stop
@@ -134,6 +138,7 @@ install(TARGETS
   correction_imu
   rtk_deadreckoning
   rtk_heading
+  rolling
   DESTINATION lib/${PROJECT_NAME}
 )
 
